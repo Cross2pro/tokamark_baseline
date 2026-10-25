@@ -16,4 +16,4 @@ training_args:
   patience: 3
 
 paths:
-  data_output_directory: /output_test
+  data_output_directory: ./output_test
