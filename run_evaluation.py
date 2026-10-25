@@ -37,6 +37,9 @@ from src.multi_conv_mlp_model import (
 from src.multi_conv_lstm_model import (
     create_lstm_architecture
 )
+from src.multi_conv_tcn_model import (
+    create_tcn_architecture
+)
 from src.model_transform import (
     ModelTransform_1,
     ModelTransform_2,
@@ -100,7 +103,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--model",
         type=str,
-        choices=["cnn", "lstm"],
+        choices=["cnn", "lstm", "tcn"],
         default="cnn",
         help="Model type to train."
     )
@@ -236,7 +239,15 @@ if __name__ == "__main__":
             dict_metadata = dict_task_metadata | config_task,
             verbose=False
         )
-         
+
+    elif args.model == "tcn":
+
+        model = create_tcn_architecture(
+            dataloader_=test_dataloader,
+            dict_metadata = dict_task_metadata | config_task,
+            verbose=False
+        )
+
     else:
         print("Model Unknown")
         raise ValueError("Unknown model.")

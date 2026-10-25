@@ -30,6 +30,9 @@ from src.multi_conv_mlp_model import (
 from src.multi_conv_lstm_model import (
     create_lstm_architecture
 )
+from src.multi_conv_tcn_model import (
+    create_tcn_architecture
+)
 from src.model_transform import (
     ModelTransform_1,
     ModelTransform_2,
@@ -285,6 +288,13 @@ if __name__ == "__main__":
     elif args.model == 'lstm':
 
         model = create_lstm_architecture(
+            dataloader_=train_dataloader,
+            dict_metadata = dict_task_metadata | config_task,
+            verbose=False
+        )
+    elif args.model == 'tcn':
+
+        model = create_tcn_architecture(
             dataloader_=train_dataloader,
             dict_metadata = dict_task_metadata | config_task,
             verbose=False
