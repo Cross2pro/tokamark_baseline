@@ -163,127 +163,13 @@ if __name__ == "__main__":
     # Initialize MAST datasets
     # ------------------------------------------------------------------------------------------------------------------
 
+    if config.get("data_splits_file"):
+        DATA_SPLIT = config["data_splits_file"]
+        print(f"[INFO] Using custom data_splits_file: {DATA_SPLIT}")
+
     train_shots_, test_shots_, val_shots_ = get_train_test_val_shots(
-        max_index=config["subset_of_shots"],        
+        max_index=config["subset_of_shots"],
         shuffle=config["shuffle"],
-        data_splits_file_path = DATA_SPLIT,
+        data_splits_file_path = DATA_SPLIT        
     )
-
-    local_flag = config["local"]
-
-    test_MAST_dataset = initialize_MAST_dataset( 
-        config_task=config_task,
-        shots_list=test_shots_,
-        local_flag=local_flag,
-        use_std_scaling=True,
-        stats_metadata_file_path=SIGNAL_STATS,
-        use_nan_filling=False,
-        remove_outliers=True,
-        outlier_metadata_file=OUTLIER_FILE,
-        remove_bad_efit_rating=True,
-        store_manager_settings=config["store_manager_settings"],
-        verbose=False
-    )
-
-    # ------------------------------------------------------------------------------------------------------------------
-    # CNN pipeline
-    # ------------------------------------------------------------------------------------------------------------------
-    
-    model_specific_transform = ComposeTransforms(
-        [
-            ModelTransform_1(dict_task_metadata | config_task),
-            ModelTransform_2(dict_task_metadata | config_task),
-        ]
-    )
-    
-    test_dataset = initialize_TokaMark_dataset(
-        dataset=test_MAST_dataset,
-        task_metadata=dict_task_metadata,
-        config_metadata=config_task,
-        custom_transform=model_specific_transform,
-        test_mode=True,
-        shuffle_windows=False
-    )
-    
-    if test_dataset is None:
-        raise ValueError("Failed to initialize test dataset. test_MAST_dataset may be None or invalid.")
-    
-    test_dataloader = DataLoader(
-            dataset=test_dataset,
-            collate_fn=model_collate_fn,
-            **config["dataloader_setting"],
-            pin_memory=True,
-        )    
-    test_dataloader_vizu = DataLoader(
-            dataset=test_dataset,
-            collate_fn=model_collate_fn,
-            batch_size=1,
-            num_workers=0,
-        )
-    # ------------------------------------------------------------------------------------------------------------------
-    # Initialize Model
-    # ------------------------------------------------------------------------------------------------------------------
-
-    if args.model == "cnn":
-
-        model = create_cnn_architecture(
-            dataloader_=test_dataloader,
-            dict_metadata = dict_task_metadata | config_task,
-            verbose=False
-        )
-
-    elif args.model == "lstm":
-
-        model = create_lstm_architecture(
-            dataloader_=test_dataloader,
-            dict_metadata = dict_task_metadata | config_task,
-            verbose=False
-        )
-
-    elif args.model == "tcn":
-
-        model = create_tcn_architecture(
-            dataloader_=test_dataloader,
-            dict_metadata = dict_task_metadata | config_task,
-            verbose=False
-        )
-
-    else:
-        print("Model Unknown")
-        raise ValueError("Unknown model.")
-
-    # -------------------------------------------------------------------
-    # Training loop
-    # -------------------------------------------------------------------
-
-    base = config["paths"]["data_output_directory"]
-
-    base_model_dir = (
-        REPO_ROOT
-        + base
-        + f"/{args.split}/{args.model}/{config_task['task_name']}/seed_{SEED}/"
-    )
-
-    # -------------------------------------------------------------------
-    # Evaluation
-    # -------------------------------------------------------------------
-
-    results_dir = REPO_ROOT + f"/results/{args.split}/{args.model}/seed_{SEED}/"
-
-    # cnn_safety_vizu_per_shot(test_dataloader_vizu, config_task, cnn_model, base_model_dir, n_shot_to_plot=3)
-    accumulator = WindowMetricsAccumulator(args.task)
-    cnn_unstd_evaluation_per_shot(
-        test_dataloader=test_dataloader,
-        config_task=config_task,
-        cnn_model=model,
-        output_dir=base_model_dir,
-        accumulator=accumulator
-    )
-    
-    compute_metrics(
-        task=args.task,
-        output_dir=results_dir,
-        window_metrics_accumulator=accumulator,
-        save_windows_metrics=True,
-        save_task_metrics=True,
-    )
+    print(f"[INFO] shots train/val/test = {len(train_shots_)}/{len(val_shots_)}/{len(test_shots_)}")

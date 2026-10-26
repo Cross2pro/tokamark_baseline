@@ -1,10 +1,10 @@
-# Full MAST run (Task 4). Data = extracted zarr dirs from /home/remote/lee/datasets/MAST-dataset tars.
+# Full MAST run (Task 4). Shots read from MAST-dataset/*.tar via MAST-zarrzip/mast_tar_index.json (tokamark feat/zarr-zip-store).
 subset_of_shots:
 shuffle: true
 local: true
 
 store_manager_settings:
-  base_local_zarr_path: /home/remote/lee/datasets/MAST-zarr
+  base_local_zarr_path: /home/remote/lee/datasets/MAST-zarrzip
 
 dataloader_setting:
   batch_size: 512

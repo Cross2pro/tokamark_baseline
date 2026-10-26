@@ -191,11 +191,16 @@ if __name__ == "__main__":
     # Initialize MAST datasets
     # ------------------------------------------------------------------------------------------------------------------
 
+    if config.get("data_splits_file"):
+        DATA_SPLIT = config["data_splits_file"]
+        print(f"[INFO] Using custom data_splits_file: {DATA_SPLIT}")
+
     train_shots_, test_shots_, val_shots_ = get_train_test_val_shots(
         max_index=config["subset_of_shots"],
         shuffle=config["shuffle"],
         data_splits_file_path = DATA_SPLIT        
     )
+    print(f"[INFO] shots train/val/test = {len(train_shots_)}/{len(val_shots_)}/{len(test_shots_)}")
 
     local_flag = config["local"]
 

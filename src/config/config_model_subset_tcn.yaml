@@ -1,0 +1,21 @@
+# Subset Task 4: batch_00000 only (~200 shots already extracted as .zarr dirs).
+# Fair CNN vs TCN comparison — identical data split and hyperparams.
+subset_of_shots:
+shuffle: false
+local: true
+data_splits_file: /home/remote/lee/gh-pr/tokamark_workspace/tokamark_baseline/data/subset_batch0_splits.csv
+
+store_manager_settings:
+  base_local_zarr_path: /home/remote/lee/datasets/MAST-zarr
+
+dataloader_setting:
+  batch_size: 32
+  num_workers: 4
+
+training_args:
+  lr: 0.0001
+  max_steps: 5000
+  patience: 10
+
+paths:
+  data_output_directory: ./output_subset

@@ -1,0 +1,19 @@
+# Full MAST run (Task 4). Shots read from MAST-dataset/*.tar via MAST-zarrzip/mast_tar_index.json (tokamark feat/zarr-zip-store).
+subset_of_shots: 64
+shuffle: true
+local: true
+
+store_manager_settings:
+  base_local_zarr_path: /home/remote/lee/datasets/MAST-zarrzip
+
+dataloader_setting:
+  batch_size: 512
+  num_workers: 8
+
+training_args:
+  lr: 0.0001
+  max_steps: 40
+  patience: 10
+
+paths:
+  data_output_directory: ./output_full_smoke
