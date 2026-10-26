@@ -1,3 +1,4 @@
+# LEGACY: batch_00000 subset incomplete for Task2/3/4 signals — await new fixed 200 list before training.
 # Subset Task 4: batch_00000 only (~200 shots already extracted as .zarr dirs).
 # Fair CNN vs TCN comparison — identical data split and hyperparams.
 subset_of_shots:
