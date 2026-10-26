@@ -157,7 +157,8 @@ if __name__ == "__main__":
         "task_4-2", 
         "task_4-4", 
         "task_4-5"]:
-        config['dataloader_setting']['num_workers'] = 4
+        # Keep YAML num_workers (was hardcoded to 4; DataLoader forks hang on this host with zarr).
+        print(f"[INFO] task {args.task}: num_workers={config['dataloader_setting'].get('num_workers')}")
 
     else:
         print('Task Unknown')
