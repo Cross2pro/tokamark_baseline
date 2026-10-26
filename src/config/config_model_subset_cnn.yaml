@@ -1,13 +1,12 @@
-# LEGACY: batch_00000 subset incomplete for Task2/3/4 signals — await new fixed 200 list before training.
-# Subset Task 4: batch_00000 only (~200 shots already extracted as .zarr dirs).
-# Fair CNN vs TCN comparison — identical data split and hyperparams.
+# Fixed-200 subset (signal-complete for Task 2/3/4). Selected seed=23 from coverage scan.
+# See docs/subset-selection-rules.md. Legacy batch_00000 list: fixed_shots_200_batch00000_legacy.txt
 subset_of_shots:
 shuffle: false
 local: true
 data_splits_file: /home/remote/lee/gh-pr/tokamark_workspace/fixed_split_200.csv
 
 store_manager_settings:
-  base_local_zarr_path: /home/remote/lee/datasets/MAST-zarr
+  base_local_zarr_path: /home/remote/lee/datasets/MAST-zarrzip-fixed200
 
 dataloader_setting:
   batch_size: 32
@@ -19,4 +18,4 @@ training_args:
   patience: 10
 
 paths:
-  data_output_directory: ./output_subset
+  data_output_directory: ./output_subset_v2

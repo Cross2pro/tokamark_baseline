@@ -1,0 +1,53 @@
+{
+  "n_qualified_pool": 4247,
+  "n_selected": 200,
+  "n_train": 172,
+  "n_val": 10,
+  "n_test": 18,
+  "seed": 23,
+  "n_tars_in_selection": 32,
+  "tar_counts": {
+    "batch_00008.tar": 7,
+    "batch_00009.tar": 7,
+    "batch_00010.tar": 7,
+    "batch_00028.tar": 7,
+    "batch_00029.tar": 7,
+    "batch_00030.tar": 7,
+    "batch_00031.tar": 7,
+    "batch_00032.tar": 7,
+    "batch_00033.tar": 6,
+    "batch_00034.tar": 6,
+    "batch_00035.tar": 6,
+    "batch_00036.tar": 6,
+    "batch_00037.tar": 6,
+    "batch_00038.tar": 6,
+    "batch_00039.tar": 6,
+    "batch_00040.tar": 6,
+    "batch_00041.tar": 6,
+    "batch_00042.tar": 6,
+    "batch_00044.tar": 6,
+    "batch_00045.tar": 6,
+    "batch_00046.tar": 6,
+    "batch_00047.tar": 6,
+    "batch_00048.tar": 6,
+    "batch_00049.tar": 6,
+    "batch_00050.tar": 6,
+    "batch_00051.tar": 6,
+    "batch_00052.tar": 6,
+    "batch_00053.tar": 6,
+    "batch_00054.tar": 6,
+    "batch_00055.tar": 6,
+    "batch_00056.tar": 6,
+    "batch_00057.tar": 6
+  },
+  "sha256": {
+    "fixed_shots_200.txt": "a38dcc9366e07e4aa3c5b67e29324bf8a1be6e4764883f0a996491b443716f84",
+    "fixed_split_200.csv": "f84675315948e59731612345947a9991aa8df4444b7fb660c718e61b90f521e2",
+    "fixed_shots_200_sources.csv": "a9d6024d0dc421d3929883b91fd27e7bb509225d37159920dc0eb5f4a0130fb8"
+  },
+  "paths": {
+    "shots": "/home/remote/lee/gh-pr/tokamark_workspace/tokamark_baseline/src/config/fixed_shots_200.txt",
+    "split": "/home/remote/lee/gh-pr/tokamark_workspace/tokamark_baseline/src/config/fixed_split_200.csv",
+    "sources": "/home/remote/lee/gh-pr/tokamark_workspace/tokamark_baseline/src/config/fixed_shots_200_sources.csv"
+  }
+}

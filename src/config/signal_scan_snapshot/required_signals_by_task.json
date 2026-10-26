@@ -1,0 +1,780 @@
+{
+  "task_2-1": [
+    {
+      "role": "input",
+      "path": "magnetics/flux_loop_flux"
+    },
+    {
+      "role": "input",
+      "path": "magnetics/b_field_pol_probe_ccbv_field"
+    },
+    {
+      "role": "input",
+      "path": "magnetics/b_field_pol_probe_obr_field"
+    },
+    {
+      "role": "input",
+      "path": "magnetics/b_field_pol_probe_obv_field"
+    },
+    {
+      "role": "input",
+      "path": "magnetics/b_field_tor_probe_saddle_voltage"
+    },
+    {
+      "role": "input",
+      "path": "pf_active/coil_current"
+    },
+    {
+      "role": "input",
+      "path": "pf_active/solenoid_current"
+    },
+    {
+      "role": "input",
+      "path": "summary/ip"
+    },
+    {
+      "role": "actuator",
+      "path": "pf_active/coil_voltage"
+    },
+    {
+      "role": "actuator",
+      "path": "summary/power_nbi"
+    },
+    {
+      "role": "output",
+      "path": "pf_active/coil_current"
+    },
+    {
+      "role": "output",
+      "path": "pf_active/solenoid_current"
+    },
+    {
+      "role": "output",
+      "path": "summary/ip"
+    },
+    {
+      "role": "output",
+      "path": "equilibrium/elongation"
+    },
+    {
+      "role": "output",
+      "path": "equilibrium/elongation_axis"
+    },
+    {
+      "role": "output",
+      "path": "equilibrium/triangularity_upper"
+    },
+    {
+      "role": "output",
+      "path": "equilibrium/triangularity_lower"
+    },
+    {
+      "role": "output",
+      "path": "equilibrium/x_point_r"
+    },
+    {
+      "role": "output",
+      "path": "equilibrium/x_point_z"
+    },
+    {
+      "role": "output",
+      "path": "equilibrium/minor_radius"
+    },
+    {
+      "role": "output",
+      "path": "equilibrium/magnetic_axis_r"
+    },
+    {
+      "role": "output",
+      "path": "equilibrium/magnetic_axis_z"
+    },
+    {
+      "role": "output",
+      "path": "equilibrium/q95"
+    },
+    {
+      "role": "output",
+      "path": "equilibrium/beta_tor"
+    },
+    {
+      "role": "output",
+      "path": "equilibrium/beta_pol"
+    },
+    {
+      "role": "output",
+      "path": "equilibrium/beta_normal"
+    },
+    {
+      "role": "output",
+      "path": "equilibrium/bvac_rmag"
+    },
+    {
+      "role": "output",
+      "path": "equilibrium/bphi_rmag"
+    }
+  ],
+  "task_2-2": [
+    {
+      "role": "input",
+      "path": "magnetics/flux_loop_flux"
+    },
+    {
+      "role": "input",
+      "path": "magnetics/b_field_pol_probe_ccbv_field"
+    },
+    {
+      "role": "input",
+      "path": "magnetics/b_field_pol_probe_obr_field"
+    },
+    {
+      "role": "input",
+      "path": "magnetics/b_field_pol_probe_obv_field"
+    },
+    {
+      "role": "input",
+      "path": "magnetics/b_field_tor_probe_saddle_voltage"
+    },
+    {
+      "role": "input",
+      "path": "pf_active/coil_current"
+    },
+    {
+      "role": "input",
+      "path": "pf_active/solenoid_current"
+    },
+    {
+      "role": "input",
+      "path": "summary/ip"
+    },
+    {
+      "role": "actuator",
+      "path": "pf_active/coil_voltage"
+    },
+    {
+      "role": "actuator",
+      "path": "summary/power_nbi"
+    },
+    {
+      "role": "output",
+      "path": "equilibrium/lcfs_r"
+    },
+    {
+      "role": "output",
+      "path": "equilibrium/lcfs_z"
+    }
+  ],
+  "task_2-3": [
+    {
+      "role": "input",
+      "path": "magnetics/flux_loop_flux"
+    },
+    {
+      "role": "input",
+      "path": "magnetics/b_field_pol_probe_ccbv_field"
+    },
+    {
+      "role": "input",
+      "path": "magnetics/b_field_pol_probe_obr_field"
+    },
+    {
+      "role": "input",
+      "path": "magnetics/b_field_pol_probe_obv_field"
+    },
+    {
+      "role": "input",
+      "path": "magnetics/b_field_tor_probe_saddle_voltage"
+    },
+    {
+      "role": "input",
+      "path": "pf_active/coil_current"
+    },
+    {
+      "role": "input",
+      "path": "pf_active/solenoid_current"
+    },
+    {
+      "role": "input",
+      "path": "summary/ip"
+    },
+    {
+      "role": "actuator",
+      "path": "pf_active/coil_voltage"
+    },
+    {
+      "role": "actuator",
+      "path": "summary/power_nbi"
+    },
+    {
+      "role": "output",
+      "path": "equilibrium/psi"
+    }
+  ],
+  "task_3-1": [
+    {
+      "role": "input",
+      "path": "thomson_scattering/t_e"
+    },
+    {
+      "role": "input",
+      "path": "thomson_scattering/n_e"
+    },
+    {
+      "role": "actuator",
+      "path": "pulse_schedule/i_plasma"
+    },
+    {
+      "role": "actuator",
+      "path": "pulse_schedule/n_e_line"
+    },
+    {
+      "role": "actuator",
+      "path": "summary/power_nbi"
+    },
+    {
+      "role": "actuator",
+      "path": "gas_injection/total_injected"
+    },
+    {
+      "role": "output",
+      "path": "thomson_scattering/t_e"
+    },
+    {
+      "role": "output",
+      "path": "thomson_scattering/n_e"
+    }
+  ],
+  "task_3-2": [
+    {
+      "role": "input",
+      "path": "thomson_scattering/t_e"
+    },
+    {
+      "role": "input",
+      "path": "thomson_scattering/n_e"
+    },
+    {
+      "role": "input",
+      "path": "spectrometer_visible/filter_spectrometer_dalpha_voltage"
+    },
+    {
+      "role": "input",
+      "path": "soft_x_rays/horizontal_cam_lower"
+    },
+    {
+      "role": "input",
+      "path": "soft_x_rays/horizontal_cam_upper"
+    },
+    {
+      "role": "actuator",
+      "path": "pulse_schedule/i_plasma"
+    },
+    {
+      "role": "actuator",
+      "path": "pulse_schedule/n_e_line"
+    },
+    {
+      "role": "actuator",
+      "path": "summary/power_nbi"
+    },
+    {
+      "role": "actuator",
+      "path": "gas_injection/total_injected"
+    },
+    {
+      "role": "output",
+      "path": "spectrometer_visible/filter_spectrometer_dalpha_voltage"
+    },
+    {
+      "role": "output",
+      "path": "soft_x_rays/horizontal_cam_lower"
+    },
+    {
+      "role": "output",
+      "path": "soft_x_rays/horizontal_cam_upper"
+    }
+  ],
+  "task_3-3": [
+    {
+      "role": "input",
+      "path": "magnetics/flux_loop_flux"
+    },
+    {
+      "role": "input",
+      "path": "magnetics/b_field_pol_probe_ccbv_field"
+    },
+    {
+      "role": "input",
+      "path": "magnetics/b_field_pol_probe_obr_field"
+    },
+    {
+      "role": "input",
+      "path": "magnetics/b_field_pol_probe_obv_field"
+    },
+    {
+      "role": "input",
+      "path": "magnetics/b_field_tor_probe_saddle_voltage"
+    },
+    {
+      "role": "input",
+      "path": "pf_active/coil_current"
+    },
+    {
+      "role": "input",
+      "path": "pf_active/solenoid_current"
+    },
+    {
+      "role": "input",
+      "path": "summary/ip"
+    },
+    {
+      "role": "input",
+      "path": "interferometer/n_e_line"
+    },
+    {
+      "role": "actuator",
+      "path": "pulse_schedule/i_plasma"
+    },
+    {
+      "role": "actuator",
+      "path": "pulse_schedule/n_e_line"
+    },
+    {
+      "role": "actuator",
+      "path": "summary/power_nbi"
+    },
+    {
+      "role": "actuator",
+      "path": "gas_injection/total_injected"
+    },
+    {
+      "role": "output",
+      "path": "thomson_scattering/t_e"
+    },
+    {
+      "role": "output",
+      "path": "thomson_scattering/n_e"
+    },
+    {
+      "role": "output",
+      "path": "equilibrium/beta_tor"
+    },
+    {
+      "role": "output",
+      "path": "equilibrium/beta_pol"
+    },
+    {
+      "role": "output",
+      "path": "equilibrium/beta_normal"
+    }
+  ],
+  "task_4-1": [
+    {
+      "role": "input",
+      "path": "magnetics/flux_loop_flux"
+    },
+    {
+      "role": "input",
+      "path": "magnetics/b_field_pol_probe_ccbv_field"
+    },
+    {
+      "role": "input",
+      "path": "magnetics/b_field_pol_probe_obr_field"
+    },
+    {
+      "role": "input",
+      "path": "magnetics/b_field_pol_probe_obv_field"
+    },
+    {
+      "role": "input",
+      "path": "magnetics/b_field_tor_probe_saddle_voltage"
+    },
+    {
+      "role": "input",
+      "path": "pf_active/coil_current"
+    },
+    {
+      "role": "input",
+      "path": "pf_active/solenoid_current"
+    },
+    {
+      "role": "input",
+      "path": "summary/ip"
+    },
+    {
+      "role": "input",
+      "path": "interferometer/n_e_line"
+    },
+    {
+      "role": "input",
+      "path": "spectrometer_visible/filter_spectrometer_dalpha_voltage"
+    },
+    {
+      "role": "input",
+      "path": "soft_x_rays/horizontal_cam_lower"
+    },
+    {
+      "role": "input",
+      "path": "soft_x_rays/horizontal_cam_upper"
+    },
+    {
+      "role": "input",
+      "path": "magnetics/b_field_tor_probe_cc_field"
+    },
+    {
+      "role": "input",
+      "path": "magnetics/b_field_pol_probe_omv_voltage"
+    },
+    {
+      "role": "actuator",
+      "path": "pulse_schedule/i_plasma"
+    },
+    {
+      "role": "actuator",
+      "path": "pulse_schedule/n_e_line"
+    },
+    {
+      "role": "actuator",
+      "path": "summary/power_nbi"
+    },
+    {
+      "role": "actuator",
+      "path": "gas_injection/total_injected"
+    },
+    {
+      "role": "output",
+      "path": "soft_x_rays/horizontal_cam_lower"
+    },
+    {
+      "role": "output",
+      "path": "soft_x_rays/horizontal_cam_upper"
+    }
+  ],
+  "task_4-2": [
+    {
+      "role": "input",
+      "path": "magnetics/flux_loop_flux"
+    },
+    {
+      "role": "input",
+      "path": "magnetics/b_field_pol_probe_ccbv_field"
+    },
+    {
+      "role": "input",
+      "path": "magnetics/b_field_pol_probe_obr_field"
+    },
+    {
+      "role": "input",
+      "path": "magnetics/b_field_pol_probe_obv_field"
+    },
+    {
+      "role": "input",
+      "path": "magnetics/b_field_tor_probe_saddle_voltage"
+    },
+    {
+      "role": "input",
+      "path": "pf_active/coil_current"
+    },
+    {
+      "role": "input",
+      "path": "pf_active/solenoid_current"
+    },
+    {
+      "role": "input",
+      "path": "summary/ip"
+    },
+    {
+      "role": "input",
+      "path": "interferometer/n_e_line"
+    },
+    {
+      "role": "input",
+      "path": "spectrometer_visible/filter_spectrometer_dalpha_voltage"
+    },
+    {
+      "role": "input",
+      "path": "soft_x_rays/horizontal_cam_lower"
+    },
+    {
+      "role": "input",
+      "path": "soft_x_rays/horizontal_cam_upper"
+    },
+    {
+      "role": "input",
+      "path": "magnetics/b_field_tor_probe_cc_field"
+    },
+    {
+      "role": "input",
+      "path": "magnetics/b_field_pol_probe_omv_voltage"
+    },
+    {
+      "role": "input",
+      "path": "thomson_scattering/t_e"
+    },
+    {
+      "role": "input",
+      "path": "thomson_scattering/n_e"
+    },
+    {
+      "role": "actuator",
+      "path": "pulse_schedule/i_plasma"
+    },
+    {
+      "role": "actuator",
+      "path": "pulse_schedule/n_e_line"
+    },
+    {
+      "role": "actuator",
+      "path": "summary/power_nbi"
+    },
+    {
+      "role": "actuator",
+      "path": "gas_injection/total_injected"
+    },
+    {
+      "role": "output",
+      "path": "soft_x_rays/horizontal_cam_lower"
+    },
+    {
+      "role": "output",
+      "path": "soft_x_rays/horizontal_cam_upper"
+    }
+  ],
+  "task_4-3": [
+    {
+      "role": "input",
+      "path": "magnetics/flux_loop_flux"
+    },
+    {
+      "role": "input",
+      "path": "magnetics/b_field_pol_probe_ccbv_field"
+    },
+    {
+      "role": "input",
+      "path": "magnetics/b_field_pol_probe_obr_field"
+    },
+    {
+      "role": "input",
+      "path": "magnetics/b_field_pol_probe_obv_field"
+    },
+    {
+      "role": "input",
+      "path": "magnetics/b_field_tor_probe_saddle_voltage"
+    },
+    {
+      "role": "input",
+      "path": "pf_active/coil_current"
+    },
+    {
+      "role": "input",
+      "path": "pf_active/solenoid_current"
+    },
+    {
+      "role": "input",
+      "path": "summary/ip"
+    },
+    {
+      "role": "input",
+      "path": "interferometer/n_e_line"
+    },
+    {
+      "role": "input",
+      "path": "spectrometer_visible/filter_spectrometer_dalpha_voltage"
+    },
+    {
+      "role": "input",
+      "path": "soft_x_rays/horizontal_cam_lower"
+    },
+    {
+      "role": "input",
+      "path": "soft_x_rays/horizontal_cam_upper"
+    },
+    {
+      "role": "input",
+      "path": "magnetics/b_field_tor_probe_cc_field"
+    },
+    {
+      "role": "input",
+      "path": "magnetics/b_field_pol_probe_omv_voltage"
+    },
+    {
+      "role": "actuator",
+      "path": "pulse_schedule/i_plasma"
+    },
+    {
+      "role": "actuator",
+      "path": "pulse_schedule/n_e_line"
+    },
+    {
+      "role": "actuator",
+      "path": "summary/power_nbi"
+    },
+    {
+      "role": "actuator",
+      "path": "gas_injection/total_injected"
+    },
+    {
+      "role": "output",
+      "path": "equilibrium/magnetic_axis_z"
+    }
+  ],
+  "task_4-4": [
+    {
+      "role": "input",
+      "path": "magnetics/flux_loop_flux"
+    },
+    {
+      "role": "input",
+      "path": "magnetics/b_field_pol_probe_ccbv_field"
+    },
+    {
+      "role": "input",
+      "path": "magnetics/b_field_pol_probe_obr_field"
+    },
+    {
+      "role": "input",
+      "path": "magnetics/b_field_pol_probe_obv_field"
+    },
+    {
+      "role": "input",
+      "path": "magnetics/b_field_tor_probe_saddle_voltage"
+    },
+    {
+      "role": "input",
+      "path": "pf_active/coil_current"
+    },
+    {
+      "role": "input",
+      "path": "pf_active/solenoid_current"
+    },
+    {
+      "role": "input",
+      "path": "summary/ip"
+    },
+    {
+      "role": "input",
+      "path": "interferometer/n_e_line"
+    },
+    {
+      "role": "input",
+      "path": "spectrometer_visible/filter_spectrometer_dalpha_voltage"
+    },
+    {
+      "role": "input",
+      "path": "soft_x_rays/horizontal_cam_lower"
+    },
+    {
+      "role": "input",
+      "path": "soft_x_rays/horizontal_cam_upper"
+    },
+    {
+      "role": "input",
+      "path": "magnetics/b_field_tor_probe_cc_field"
+    },
+    {
+      "role": "input",
+      "path": "magnetics/b_field_pol_probe_omv_voltage"
+    },
+    {
+      "role": "actuator",
+      "path": "pulse_schedule/i_plasma"
+    },
+    {
+      "role": "actuator",
+      "path": "pulse_schedule/n_e_line"
+    },
+    {
+      "role": "actuator",
+      "path": "summary/power_nbi"
+    },
+    {
+      "role": "actuator",
+      "path": "gas_injection/total_injected"
+    },
+    {
+      "role": "output",
+      "path": "summary/ip"
+    }
+  ],
+  "task_4-5": [
+    {
+      "role": "input",
+      "path": "magnetics/flux_loop_flux"
+    },
+    {
+      "role": "input",
+      "path": "magnetics/b_field_pol_probe_ccbv_field"
+    },
+    {
+      "role": "input",
+      "path": "magnetics/b_field_pol_probe_obr_field"
+    },
+    {
+      "role": "input",
+      "path": "magnetics/b_field_pol_probe_obv_field"
+    },
+    {
+      "role": "input",
+      "path": "magnetics/b_field_tor_probe_saddle_voltage"
+    },
+    {
+      "role": "input",
+      "path": "pf_active/coil_current"
+    },
+    {
+      "role": "input",
+      "path": "pf_active/solenoid_current"
+    },
+    {
+      "role": "input",
+      "path": "summary/ip"
+    },
+    {
+      "role": "input",
+      "path": "interferometer/n_e_line"
+    },
+    {
+      "role": "input",
+      "path": "spectrometer_visible/filter_spectrometer_dalpha_voltage"
+    },
+    {
+      "role": "input",
+      "path": "soft_x_rays/horizontal_cam_lower"
+    },
+    {
+      "role": "input",
+      "path": "soft_x_rays/horizontal_cam_upper"
+    },
+    {
+      "role": "input",
+      "path": "magnetics/b_field_tor_probe_cc_field"
+    },
+    {
+      "role": "input",
+      "path": "magnetics/b_field_pol_probe_omv_voltage"
+    },
+    {
+      "role": "actuator",
+      "path": "pulse_schedule/i_plasma"
+    },
+    {
+      "role": "actuator",
+      "path": "pulse_schedule/n_e_line"
+    },
+    {
+      "role": "actuator",
+      "path": "summary/power_nbi"
+    },
+    {
+      "role": "actuator",
+      "path": "gas_injection/total_injected"
+    },
+    {
+      "role": "output",
+      "path": "magnetics/b_field_tor_probe_cc_field"
+    },
+    {
+      "role": "output",
+      "path": "magnetics/b_field_pol_probe_omv_voltage"
+    }
+  ]
+}
