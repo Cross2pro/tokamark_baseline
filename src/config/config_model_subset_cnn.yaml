@@ -10,7 +10,7 @@ store_manager_settings:
 
 dataloader_setting:
   batch_size: 32
-  num_workers: 4
+  num_workers: 0
 
 training_args:
   lr: 0.0001
