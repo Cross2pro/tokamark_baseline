@@ -3,7 +3,7 @@
 subset_of_shots:
 shuffle: false
 local: true
-data_splits_file: /home/remote/lee/gh-pr/tokamark_workspace/tokamark_baseline/src/config/subset_batch0_splits.csv
+data_splits_file: /home/remote/lee/gh-pr/tokamark_workspace/fixed_split_200.csv
 
 store_manager_settings:
   base_local_zarr_path: /home/remote/lee/datasets/MAST-zarr

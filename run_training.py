@@ -138,30 +138,16 @@ if __name__ == "__main__":
         config_task["stride_window"] = 0.005
         shuffle_buffer_size = 2048
 
-    if args.task in [
-        "task_1-1",
-        "task_1-2", 
-        "task_1-3",
-        "task_2-1",
-        "task_2-2", 
-        "task_2-3",        
-        "task_3-1",
-        "task_3-2", 
-        "task_3-3",
-        "task_4-3"
-        ]:
-        config['dataloader_setting']['num_workers'] = 8
-    
-    elif args.task in [
-        "task_4-1",
-        "task_4-2", 
-        "task_4-4", 
-        "task_4-5"]:
-        # Keep YAML num_workers (was hardcoded to 4; DataLoader forks hang on this host with zarr).
-        print(f"[INFO] task {args.task}: num_workers={config['dataloader_setting'].get('num_workers')}")
-
-    else:
-        print('Task Unknown')
+    # Always honor YAML num_workers (hardcoded 8/4 hung DataLoader on local Zarr).
+    known = {
+        "task_1-1", "task_1-2", "task_1-3",
+        "task_2-1", "task_2-2", "task_2-3",
+        "task_3-1", "task_3-2", "task_3-3",
+        "task_4-1", "task_4-2", "task_4-3", "task_4-4", "task_4-5",
+    }
+    if args.task not in known:
+        print("Task Unknown")
+    print(f"[INFO] task {args.task}: num_workers={config["dataloader_setting"].get("num_workers")}")
 
     dict_task_metadata = get_task_metadata(
         config_task=config_task,
