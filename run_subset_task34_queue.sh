@@ -50,7 +50,7 @@ echo -e "task_4-1\tcnn\treuse\t0\tprior subset result\t$(ts)" >> "$STATUS"
 echo -e "task_4-1\ttcn\treuse\t0\tprior subset result\t$(ts)" >> "$STATUS"
 echo "$(ts) SKIP task_4-1 (reuse existing checkpoints/metrics)" | tee -a "$QUEUE_LOG"
 
-TASKS=(task_4-2 task_4-3 task_4-4 task_4-5 task_3-1 task_3-2 task_3-3)
+TASKS=(task_4-2 task_4-3 task_4-4 task_4-5)  # Task 2/3 run on other servers, not here
 for task in "${TASKS[@]}"; do
   for model in cnn tcn; do
     run_one "$task" "$model"
