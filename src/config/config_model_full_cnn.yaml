@@ -1,0 +1,19 @@
+# Full MAST run (Task 4). Data = extracted zarr dirs from /home/remote/lee/datasets/MAST-dataset tars.
+subset_of_shots:
+shuffle: true
+local: true
+
+store_manager_settings:
+  base_local_zarr_path: /home/remote/lee/datasets/MAST-zarr
+
+dataloader_setting:
+  batch_size: 512
+  num_workers: 8
+
+training_args:
+  lr: 0.0001
+  max_steps: 10000000
+  patience: 10
+
+paths:
+  data_output_directory: ./output_full
